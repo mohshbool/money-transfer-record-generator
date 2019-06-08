@@ -1,0 +1,27 @@
+{
+  "name": "money-transfer-record-generator",
+  "version": "0.1.0",
+  "description": "A minimal application to generate money transfer records.",
+  "author": "Mohammad Shbool",
+  "main": "src/app/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "electron-pdf-window": "^1.0.12",
+    "tmp": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "electron": "^5.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1"
+  },
+  "eslintConfig": {
+    "extends": "babel-eslint"
+  },
+  "license": "MIT"
+}

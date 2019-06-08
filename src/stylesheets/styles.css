@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font: 14px "Lato", Arial, sans-serif;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container-fluid {
+  height: 100vh;
+  padding: 20px 30px;
+}
+
+.statement-date-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-container {
+  width: 30%;
+}

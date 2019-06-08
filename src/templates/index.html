@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="../stylesheets/rtl-bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+  </head>
+  <body dir="rtl">
+    <div class="container-fluid" dir="rtl">
+      <div class="statement-date-row">
+        <form class="statement-date-form">
+          <div class="form-group input-container">
+            <label for="statement-number">رقم الكشف</label>
+            <input type="number" class="form-control" name="statementNumber" placeholder="رقم الكشف">
+          </div>
+          <div class="form-group input-container">
+            <label for="date">التاريخ</label>
+            <input type="date" class="form-control" name="date" placeholder="التاريخ">
+          </div>
+        </form>
+      </div>
+      <div class="transactions-container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 15%">رقم الحوالة</th>
+              <th scope="col" style="width: 15%">المبلغ</th>
+              <th scope="col" style="width: 35%">اسم المستفيد</th>
+              <th scope="col" style="width: 20%">المرسل</th>
+              <th scope="col" style="width: 20%">المكان</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><input type="number" class="form-control" name="transactionNumber" placeholder="رقم الحوالة"></th>
+              <td><input type="number" step="0.01" class="form-control" name="amount" placeholder="المبلغ"></td>
+              <td><input type="text" class="form-control" name="benefitiaryName" placeholder="اسم المستفيد"></td>
+              <td><input type="text" class="form-control" name="senderName" placeholder="المرسل"></td>
+              <td><input type="text" class="form-control" name="place" placeholder="المكان"></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" id="print">طباعة</button>
+        <button type="button" class="btn btn-primary" id="add-line">اضافة سطر</button>
+      </div>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('../app/renderer.js');
+      require('../app/scripts.js');
+    </script>
+  </body>
+</html>
