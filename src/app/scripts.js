@@ -116,7 +116,6 @@ window.onload = function() {
         fetch('http://127.0.0.1:5000/pdf', {
           headers: {
             'Content-Type': 'application/json; charset=utf-8',
-            // eslint-disable-next-line no-undef
             Authorization: process.env.AUTH,
           },
           method: 'POST',
