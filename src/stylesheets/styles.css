@@ -91,3 +91,7 @@ table {
   align-self: center;
   padding-right: 30px;
 }
+
+#sar-total-container {
+  display: none;
+}
