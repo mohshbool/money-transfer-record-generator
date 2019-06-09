@@ -33,6 +33,23 @@ label {
   justify-content: space-around;
 }
 
+table.table-bordered{
+  border:1px solid #424345;
+  margin-top:20px;
+}
+
+table.table-bordered > thead > tr > th{
+  border:1px solid #424345;
+}
+
+table.table-bordered > tbody > tr > td{
+  border:1px solid #424345;
+}
+
+table {
+  font-size: 1.12rem;
+}
+
 .totals-container {
   width: 40%;
   padding: 4px 0 20px 0;
