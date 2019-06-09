@@ -3,7 +3,7 @@
 }
 
 html, body {
-  background-color: #eee;
+  background-color: #f5f6f7;
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,11 +20,39 @@ body {
   padding: 20px 30px;
 }
 
+.input-container {
+  width: 30%;
+}
+
+label {
+  font-size: 1.15rem;
+}
+
 .statement-date-form {
   display: flex;
   justify-content: space-around;
 }
 
-.input-container {
-  width: 30%;
+.totals-container {
+  width: 40%;
+  padding: 4px 0 20px 0;
+}
+
+.total-container {
+  border: 1px solid rgb(46, 46, 46); 
+  display: flex;
+  margin: 1px 0;
+}
+
+.total-default {
+  border-left: 1.5px solid black;
+  padding: 8px 12px;
+  width: 11em;
+  font-size: 1.2rem;
+}
+
+.total-value {
+  font-size: 1.3rem;
+  align-self: center;
+  padding-right: 30px;
 }
