@@ -67,8 +67,8 @@ window.onload = function() {
   });
   document.getElementById('print').addEventListener('click', function() {
     let data = {
-      statementNumber: document.getElementsByName('statementNumber')[0].value,
-      date: document.getElementsByName('date')[0].value,
+      statementNumber: document.getElementById('statementNumber').value,
+      date: document.getElementById('date').value,
     };
     if (data.statementNumber.length === 0 || data.statementNumber == '') {
       alert('الرجاء ادخال رقم الكشف');
