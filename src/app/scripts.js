@@ -55,6 +55,7 @@ function getValues() {
 }
 
 window.onload = function() {
+  document.getElementById('date').valueAsDate = new Date();
   document.getElementById('add-line').addEventListener('click', function() {
     if (isLastRowValid()) {
       document
