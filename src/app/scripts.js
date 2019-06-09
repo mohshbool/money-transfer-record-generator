@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./helpers').extendModule(Number);
+require('./prototypes').extendModule(Number);
 
 const { BrowserWindow } = require('electron').remote;
 
@@ -64,13 +64,14 @@ function calculateTotal() {
   document
     .getElementsByName('amount')
     .forEach(({ value }) => arr.push(parseFloat(value)));
-  const amount = arr.reduce((a, b) => a + b, 0);
+  const amount = arr.reduce((a, b) => a + b, 0) || 0;
   if (isSAR()) {
     document.getElementById('sar-total').innerText = amount.maskCurrency();
     document.getElementById('usd-total').innerText = (
       amount * 0.27
     ).maskCurrency();
   } else {
+    document.getElementById('sar-total').innerText = 0;
     document.getElementById('usd-total').innerText = amount.maskCurrency();
   }
 }
@@ -80,6 +81,16 @@ window.onload = function() {
   document.getElementsByName('amount').forEach(elem => {
     elem.addEventListener('input', calculateTotal);
   });
+  document
+    .getElementById('is-sar-input')
+    .addEventListener('change', function() {
+      if (isSAR(this)) {
+        document.getElementById('sar-total-container').style.display = 'flex';
+      } else {
+        document.getElementById('sar-total-container').style.display = 'none';
+      }
+      calculateTotal();
+    });
   document.getElementById('add-line').addEventListener('click', function() {
     if (isLastRowValid()) {
       document
