@@ -1,4 +1,4 @@
-* {
+*, ::after, ::before {
   box-sizing: border-box;
 }
 
@@ -26,6 +26,24 @@ body {
 
 label {
   font-size: 1.15rem;
+}
+
+.is-sar {
+  padding-right: 60px;
+}
+
+#is-sar-input {
+  transform: scale(1.5);
+  -ms-transform: scale(1.5); 
+  -moz-transform: scale(1.5); 
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5); 
+  padding: 10px;
+}
+
+.is-sar-label {
+  font-size: 1.3rem;
+  padding-right: 4px;
 }
 
 .statement-date-form {
