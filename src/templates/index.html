@@ -33,7 +33,7 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row"><input type="number" class="form-control" name="transactionNumber" placeholder="رقم الحوالة"></th>
+              <td scope="row"><input type="number" class="form-control" name="transactionNumber" placeholder="رقم الحوالة"></td>
               <td><input type="number" step="0.01" class="form-control" name="amount" placeholder="المبلغ"></td>
               <td><input type="text" class="form-control" name="benefitiaryName" placeholder="اسم المستفيد"></td>
               <td><input type="text" class="form-control" name="senderName" placeholder="المرسل"></td>
@@ -41,6 +41,20 @@
             </tr>
           </tbody>
         </table>
+        <div class="totals-container">
+          <div class="total-container">
+            <div class="total-default">
+              المجموع بالدولار الأمريكي
+            </div>
+            <div class="total-value" id="usd-total">0</div>
+          </div>
+          <div class="total-container sar-total-container">
+            <div class="total-default">
+              المجموع بالريال السعودي
+            </div>
+            <div class="total-value" id="sar-total">0</div>
+          </div>
+        </div>
         <button type="button" class="btn btn-primary" id="print">طباعة</button>
         <button type="button" class="btn btn-primary" id="add-line">اضافة سطر</button>
       </div>
